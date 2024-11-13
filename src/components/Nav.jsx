@@ -37,7 +37,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="mt-10">
+    <div className="md:mt-10">
       <div className="max-w-[1480px] mx-auto px-5 container">
         <div className="flex justify-between items-center">
           <div className="w-[215px] h-[65px]">
@@ -52,7 +52,7 @@ const Nav = () => {
           </div>
           <ul
             className={`flex items-center lg:gap-10 sm:gap-6 gap-4 max-lg:fixed max-lg:justify-center top-0 max-lg:-left-full max-lg:z-[90] max-lg:h-screen max-lg:flex-col max-lg:w-full max-lg:duration-300 max-lg:bg-white ${
-              show ? "" : "!start-0"
+              show ? "" : "!left-0"
             }`}
           >
             {NAV_LINKS.map((obj, index) => (
@@ -66,23 +66,44 @@ const Nav = () => {
                 </Link>
               </li>
             ))}
-                        <li className="sm:hidden">
-              <CommonButton  className="uppercase">Conctact Us</CommonButton>
+            <li className="sm:hidden">
+              <CommonButton className="uppercase">Contact Us</CommonButton>
             </li>
           </ul>
           <div className="flex items-center justify-end">
-       <CommonButton className="max-sm:hidden">Contact us</CommonButton>
+            <CommonButton className="max-sm:hidden">Contact us</CommonButton>
           </div>
-          <div className="flex items-center lg:gap-12 gap-6">
+          <div className="flex items-center lg:gap-12 gap-6 lg:!hidden">
+            {/* Menu Toggle Icon */}
             <div
-              className={`cursor-pointer relative z-[100] lg:hidden max-sm:scale-75 ${
-                show ? "" : "cross"
-              }`}
+              className={`cursor-pointer relative z-[100] lg:!hidden max-sm:scale-75`}
               onClick={() => setShow(!show)}
             >
-              <span className="nav-toggle-items"></span>
-              <span className="nav-toggle-items my-2"></span>
-              <span className="nav-toggle-items"></span>
+              {/* Custom Menu Icon (Hamburger) */}
+              {!show ? (
+           <svg
+           xmlns="http://www.w3.org/2000/svg"
+           className="w-8 h-8 text-gray-700"
+           fill="none"
+           viewBox="0 0 24 24"
+           stroke="currentColor"
+         >
+           <path
+             strokeLinecap="round"
+             strokeLinejoin="round"
+             strokeWidth="2"
+             d="M6 18L18 6M6 6l12 12"
+           />
+         </svg>
+              ) : (
+                // Cross Icon
+                <svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.884766" width="16" height="2" fill="#111111"/>
+                <rect x="0.884766" y="8" width="24" height="2" fill="#111111"/>
+                <rect x="8.88477" y="16" width="16" height="2" fill="#111111"/>
+                </svg>
+                
+              )}
             </div>
           </div>
         </div>

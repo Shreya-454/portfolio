@@ -19,13 +19,13 @@ const CommonButton = ({
     <Link
       to={url}
       {...props}
-      className={`${className} ${ghost ? buttonType.ghost : transparent ? buttonType.transparent : buttonType.default} rounded-full px-12 py-[22px] uppercase duration-300 font-ClashDisplay-Semibold font-semibold text-sm sm:text-base !leading-118`}>
+      className={`${className} ${ghost ? buttonType.ghost : transparent ? buttonType.transparent : buttonType.default} rounded-full px-[17px] sm:px-12 py-4 sm:py-[22px] uppercase duration-300 font-ClashDisplay-Semibold font-semibold text-base sm:text-base leading-none`}>
       {children}
     </Link>
   ) : (
     <button
       {...props}
-      className={`${className} ${ghost ? buttonType.ghost : transparent ? buttonType.transparent : buttonType.default} rounded-full px-12 py-[22px] uppercase duration-300 font-ClashDisplay-Semibold font-semibold text-sm sm:text-base !leading-118`}>
+      className={`${className} ${ghost ? buttonType.ghost : transparent ? buttonType.transparent : buttonType.default} rounded-full px-[17px] sm:px-12 py-4 sm:py-[22px] uppercase duration-300 font-ClashDisplay-Semibold font-semibold text- sm:text-base leading-none`}>
       {children}
     </button>
   )

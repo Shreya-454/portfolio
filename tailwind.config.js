@@ -19,12 +19,20 @@ module.exports = {
       lineHeight:{
 113:"113%",
         126:"126%",
+        140:"140%",
+        144:"144%",
       },
       backgroundImage:{
         'head':"url(/assets/images/webp/head-bg.webp)"
       },
       fontSize:{
         large:'120px',
+        big:'140px'
+      },
+      screens:{
+        xs:'425px',
+        "custom-xl":"1140px",
+    
       }
     },
   },
